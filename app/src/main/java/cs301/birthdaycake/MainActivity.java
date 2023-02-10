@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
         // cp2:2
         Button blowout = (Button)findViewById(R.id.blowout);
         blowout.setOnClickListener(controller);
+
+        // cp3:3
+        CompoundButton candles = (CompoundButton)findViewById(R.id.candles);
+        candles.setOnCheckedChangeListener(controller);
+
+        // cp 4
+        SeekBar numCandles = (SeekBar)findViewById(R.id.seekBar);
+        numCandles.setOnSeekBarChangeListener(controller);
+
 
     }
 
