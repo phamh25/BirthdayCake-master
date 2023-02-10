@@ -96,6 +96,7 @@
                 android:id="@+id/blowout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="blowout"
                 android:text="BLOW OUT" />
 
             <Button

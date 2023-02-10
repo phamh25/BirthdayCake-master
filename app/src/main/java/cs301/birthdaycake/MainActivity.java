@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         // 8
         CakeController controller = new CakeController(viewID);
+
+        // cp2:2
+        Button blowout = (Button)findViewById(R.id.blowout);
+        blowout.setOnClickListener(controller);
 
     }
 
