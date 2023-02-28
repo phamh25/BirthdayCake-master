@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         viewID.setOnTouchListener(controller);
 
-
     }
 
     public void goodbye(View button) {

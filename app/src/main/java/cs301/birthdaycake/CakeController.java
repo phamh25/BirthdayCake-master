@@ -47,12 +47,13 @@ public class CakeController implements View.OnClickListener, CompoundButton.OnCh
 
     public boolean onTouch(View v, MotionEvent event) {
         Log.d("XY", "Touch");
-        model.balloonX = event.getX();
-        model.balloonY = event.getY();
+        model.touchX = event.getX();
+        model.touchY = event.getY();
         model.hasTouched = true;
         view.invalidate();
         return false;
-    }
 
+
+    }
 
 }

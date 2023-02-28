@@ -19,6 +19,8 @@ public class CakeView extends SurfaceView {
     Paint balloon = new Paint();
     Paint string = new Paint();
 
+    Paint XY = new Paint();
+
     /* These constants define the dimensions of the cake.  While defining constants for things
         like this is good practice, we could be calculating these better by detecting
         and adapting to different tablets' screen sizes and resolutions.  I've deliberately
@@ -67,6 +69,9 @@ public class CakeView extends SurfaceView {
         string.setColor(Color.BLACK);
 
 
+        XY.setTextSize(50.0f);
+        XY.setColor(Color.RED);
+
         setBackgroundColor(Color.WHITE);  //better than black default
 
         // 3
@@ -112,10 +117,10 @@ public class CakeView extends SurfaceView {
      */
     public void drawBalloon(Canvas canvas) {
         if (model.hasTouched) {
-            canvas.drawOval(model.balloonX - 25, model.balloonY -
-                    40,model.balloonX + 25 , model.balloonY + 40, balloon);
-            canvas.drawLine(model.balloonX, model.balloonY + 40,
-                    model.balloonX, model.balloonY + 100, string);
+            canvas.drawOval(model.touchX - 25, model.touchY -
+                    40,model.touchX + 25 , model.touchY + 40, balloon);
+            canvas.drawLine(model.touchX, model.touchY + 40,
+                    model.touchX, model.touchY + 100, string);
         }
     }
 
@@ -147,7 +152,10 @@ public class CakeView extends SurfaceView {
         //cp 4
         for(int i = 1; i <= model.numCandles; i++) {
             drawCandle(canvas, cakeLeft + cakeWidth * i/(model.numCandles + 1) - candleWidth/2, cakeTop);
+
         }
+        canvas.drawText(model.touchX + ", " + model.touchY, 1600f, 700f,
+                XY);
 
         drawBalloon(canvas);
 

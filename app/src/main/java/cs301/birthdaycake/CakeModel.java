@@ -9,9 +9,8 @@ public class CakeModel {
     public boolean hasCandles = true; // 2d
 
     public boolean hasTouched = false;
-    public float balloonX = 0;
-    public float balloonY = 0;
-
+    public float touchX = 0;
+    public float touchY = 0;
 
 
 }
