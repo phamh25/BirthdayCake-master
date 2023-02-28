@@ -97,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="blowout"
-                android:text="BLOW OUT" />
+                android:text="EXTINGUISH" />
 
             <Button
                 android:id="@+id/goodbye"
