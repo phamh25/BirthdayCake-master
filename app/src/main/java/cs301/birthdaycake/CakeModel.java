@@ -8,5 +8,9 @@ public class CakeModel {
     public boolean hasFrosting = true; // 2c
     public boolean hasCandles = true; // 2d
 
+    public boolean hasTouched = false;
+    public float touchX = 0;
+    public float touchY = 0;
+
 
 }
